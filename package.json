@@ -1,0 +1,14 @@
+{
+  "name": "fragmentation-aware-billing-ledger",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Prototype billing ledger for boutique consultancies: fixed-point money, India GST, progressive TDS capture, fragmentation recommendation, invoice-to-payment asymmetry, coverage-aware accrual.",
+  "scripts": {
+    "test": "node --test test/engine.test.mjs test/accounting.test.mjs test/ui.test.mjs",
+    "serve": "python3 -m http.server 8090",
+    "server": "node server/index.mjs",
+    "test:server": "node --test test/server.db.test.mjs test/server.auth.test.mjs test/server.http.test.mjs test/server.routes.test.mjs test/server.google.test.mjs test/server.smoke.test.mjs",
+    "test:all": "node --test test/engine.test.mjs test/accounting.test.mjs test/ui.test.mjs test/store.test.mjs test/server.db.test.mjs test/server.auth.test.mjs test/server.http.test.mjs test/server.routes.test.mjs test/server.google.test.mjs test/server.smoke.test.mjs"
+  }
+}
